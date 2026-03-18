@@ -2,12 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aljo Aji John | Portfolio</title> 
-  
-  <!-- Google Font --> 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">  
- 
-  <style>
+  <title>Aljo Aji John | Portfolio</title>  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">  <style>
     :root {
       --bg: #0f172a;
       --card: #020617;
