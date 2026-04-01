@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aljo Premium Portfolio</title>
+<title>Aljo Aji John Premium Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -12,6 +12,10 @@
 --card:#0d0d16;
 --text:#e5e7eb;
 --accent:#8b5cf6;
+}
+
+html {
+scroll-behavior: smooth;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
@@ -37,6 +41,9 @@ color:#fff;
 cursor:pointer;
 box-shadow:0 0 15px #7c3aed,0 0 30px #7c3aed;
 transition:0.3s;
+text-decoration: none;
+display: inline-block;
+font-size: 1rem;
 }
 
 .btn:hover{transform:scale(1.08);box-shadow:0 0 30px #a78bfa}
@@ -45,6 +52,7 @@ transition:0.3s;
 h2{color:var(--accent);margin-bottom:15px;text-align:center}
 
 .grid{display:grid;gap:20px}
+.grid-single{display:grid;gap:15px;grid-template-columns:1fr;}
 
 .card{
 background:var(--card);
@@ -56,6 +64,8 @@ transition:0.3s;
 }
 
 .card:hover{transform:translateY(-8px) scale(1.03);box-shadow:0 0 25px var(--accent)}
+.card strong {font-size: 1.1rem; color: #fff;}
+.card span {color: #a78bfa; font-size: 0.9rem; display: block; margin-top: 5px;}
 
 @media(min-width:768px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1024px){.grid{grid-template-columns:repeat(3,1fr)}}
@@ -77,16 +87,36 @@ color:white;
 <canvas id="particles"></canvas>
 
 <div class="container"><div class="hero">
-<img src="yourphoto.jpg">
+
 <h1>Hey, I am <span class="typing" id="typing"></span></h1>
-<p>Cybersecurity Professional</p>
-<button class="btn">View Work</button>
-<button class="btn">Contact Me</button>
-<a href="resume.pdf" download><button class="btn">Download Resume</button></a>
+<p>MCA Scholar & Cybersecurity Professional</p>
+<button class="btn" onclick="document.getElementById('education').scrollIntoView();">View Work</button>
+<button class="btn" onclick="document.getElementById('contact').scrollIntoView();">Contact Me</button>
+<a href="resume.pdf" download class="btn">Download Resume</a>
 </div><div class="section">
 <h2>About Me</h2>
-<div class="card">I build secure and scalable systems with strong cybersecurity skills.</div>
-</div><div class="section">
+<div class="card">I am an MCA Scholar and Certified SOC Analyst with a solid background in programming and cybersecurity. I specialize in detecting and responding to security threats while automating processes to build safer systems.</div>
+</div>
+
+<div class="section" id="education">
+<h2>Education & Training</h2>
+<div class="grid-single">
+<div class="card">
+<strong>Master of Computer Applications </strong>
+<span>Lourdes Matha College of Science and Technology, Thiruvananthapuram</span>
+</div>
+<div class="card">
+<strong>Certified SOC Analyst</strong>
+<span>Red Team Hacker Academy, Kochi</span>
+</div>
+<div class="card">
+<strong>Bachelor of Computer Applications (BCA)</strong>
+<span>Mahatma Gandhi University, Kochi</span>
+</div>
+</div>
+</div>
+
+<div class="section">
 <h2>Skills</h2>
 <div class="grid">
 <div class="card">SIEM</div>
@@ -101,17 +131,17 @@ color:white;
 <div class="card">Dispensary System</div>
 <div class="card">Crime Reporting System</div>
 </div>
-</div><div class="section">
+</div><div class="section" id="contact">
 <h2>Contact</h2>
 <form onsubmit="sendMail(event)">
 <input type="text" placeholder="Your Name" required>
 <input type="email" placeholder="Your Email" required>
 <textarea placeholder="Message" required></textarea>
-<button class="btn">Send Message</button>
+<button class="btn" type="submit">Send Message</button>
 </form>
 </div></div><script>
 // typing effect
-const text="Aljo";
+const text="Aljo Aji John";
 let i=0;
 function typing(){
  if(i<text.length){
